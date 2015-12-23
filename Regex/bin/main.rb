@@ -8,4 +8,3 @@ puts
 
 $vowel_replacer = ReplaceVowel.new
 puts $vowel_replacer.replace(_user_input)
-
