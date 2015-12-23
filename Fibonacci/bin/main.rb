@@ -1,5 +1,5 @@
 #!/usr/bin/ruby
-require '../core/fibonacci'
+require '../lib/fibonacci'
 puts 'Welcome! This is fibonacci in action, just tell me the maximum range of the series you want to generate. 1000 is the default'
 print 'Kindly supply the maximum range in the series:      '
 _user_input = gets.chomp.to_s

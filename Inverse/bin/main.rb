@@ -1,5 +1,5 @@
 #!/usr/bin/ruby
-require '../core/inverse'
+require '../lib/inverse'
 puts 'Welcome! I want to demonstrate how to override the to_s method in Object class, supply the details below'
 print 'Name:             '
 _user_name = gets.chomp

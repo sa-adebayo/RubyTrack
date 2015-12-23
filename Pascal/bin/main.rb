@@ -1,4 +1,4 @@
-require '../core/pascal_triangle'
+require '../lib/pascal_triangle'
 puts 'Creating a pascal triangle'
 puts
 print 'Supply the triangle\'s limit:    '

@@ -1,5 +1,5 @@
 #!/usr/bin/ruby
-require '../core/bike'
+require '../lib/bike'
 puts 'Welcome! I want to demonstrate what\'s happening in the Bike and Vehicle class'
 puts 'To register a Vehicle press 1      '
 puts 'To register a Bike press    2      '

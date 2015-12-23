@@ -1,5 +1,5 @@
 #!/usr/bin/ruby
-require '../core/palindrome'
+require '../lib/palindrome'
 puts 'Welcome! This is palindrome in action, you need to supply a word and i\'ll check it right away. Supply q or Q to quit'
 quit = false
 begin

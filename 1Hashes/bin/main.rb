@@ -1,5 +1,5 @@
 #!/usr/bin/ruby
-require '../core/alphabet_counter'
+require '../lib/alphabet_counter'
 puts 'Welcome! You supply a word and I will count the number of time each character occur'
 print 'Kindly supply the word:      '
 _user_input = gets.chomp

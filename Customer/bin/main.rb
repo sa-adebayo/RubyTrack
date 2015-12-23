@@ -1,5 +1,5 @@
 #!/usr/bin/ruby
-require '../core/customer'
+require '../lib/customer'
 exit = false
 begin
   puts 'Welcome to your Personal Bank Inc.'
