@@ -1,4 +1,4 @@
-require '../../Hash/core/array'
+require '../../Hash/lib/array'
 class Array
   def sort_hash_to_even_odd
     _to_hash = self.to_hash
