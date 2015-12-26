@@ -7,6 +7,9 @@ class String
     end while _array_of_word.length > 0
     _result.join(' ')
   end
-end
 
-puts 'I am here again, what is it again'.reverse_word
+  def reverse_word_inbuilt
+    _array_of_word = self.split(/[\W+&&[\s]]/).reverse
+    _array_of_word.join(' ')
+  end
+end
