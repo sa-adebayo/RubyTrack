@@ -3,15 +3,15 @@ puts 'I will be calculating both Simple and Compound Interest...'
 puts 'Try to input a valid value, I will reset any invalid value to 0.00'
 print 'Supply the principal:             '
 principal = Float(gets.chomp) rescue 0.00
-puts
-print 'Supply the interest rate:         '
-rate = Float(gets.chomp) rescue 0.00
-puts
 print 'Supply the interest time:         '
 time = Float(gets.chomp) rescue 0.00
 puts
-bank = Interest.new(principal, rate, time)
-print "The simple interest is #{bank.simple_interest} while the compound interest is #{bank.compound_interest}"
+bank = Interest.new do |bank|
+  bank.principal = principal
+  bank.time = time
+  bank.rate = 10
+end
+print "Simple interest is #{bank.simple_interest}, Compound interest is #{bank.compound_interest} and the Difference is #{bank.difference}"
 puts
 begin
   puts
@@ -35,7 +35,7 @@ begin
       print 'What is the new Interest Time Value?   '
       bank.time = Float(gets.chomp) rescue 0.00
     when 'd'
-      print "The simple interest is #{bank.simple_interest} while the compound interest is #{bank.compound_interest}\n"
+      print "Simple interest is #{bank.simple_interest}, Compound interest is #{bank.compound_interest} and the Difference is #{bank.difference}\n"
     when 'q'
       print 'Thanks for using my service...'
     else
