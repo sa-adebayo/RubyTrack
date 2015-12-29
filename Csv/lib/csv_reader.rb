@@ -21,11 +21,11 @@ class CsvReader
       end
     end
     puts '....... started writing into file ........'
-    File.open('sorted_employee', 'w') do |file|
+    File.open('sorted_employee', 'w') do |file_writer|
       employee_sorted.each do |key, grouped_employee|
-        file.print "#{key} \n"
+        file_writer.print grouped_employee.length > 1 ? "#{key}s \n" : "#{key} \n"
         grouped_employee.each do |each_employee|
-          file.print each_employee.write + "\n"
+          file_writer.print each_employee.write + "\n"
         end
       end
     end
