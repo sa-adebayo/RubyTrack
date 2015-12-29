@@ -10,5 +10,3 @@ class Employee
     "#{@name} (Employee Id: #{@employee_id})"
   end
 end
-
-
