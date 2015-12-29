@@ -1,4 +1,4 @@
-#!/usr/bin/ruby
+
 class Interest
   attr_reader :principal, :rate, :time, :compound_interest, :simple_interest, :difference
   #default values passed if we do not give argument, if we give argument then that will be valid

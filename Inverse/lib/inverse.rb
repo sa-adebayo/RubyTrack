@@ -1,4 +1,3 @@
-#!/usr/bin/ruby
 class Inverse
   attr_reader :name, :gender, :age
 

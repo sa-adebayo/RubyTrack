@@ -1,8 +1,7 @@
-#!/usr/bin/ruby
-class Fibonacci
-  def generate (size = 1000)
+class Integer
+  def generate_fibonacci
     $previous, $current = 1, 1
-    while $previous <= size
+    while $previous <= self
       yield $previous
       $previous, $current = $current, $previous + $current
     end

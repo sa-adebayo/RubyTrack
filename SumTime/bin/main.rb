@@ -1,4 +1,4 @@
-require '../lib/time'
+require_relative '../lib/time'
 puts 'We want to perform addition on different string time values'
 begin
   print 'Supply the first time:         '

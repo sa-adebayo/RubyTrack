@@ -1,6 +1,4 @@
-#!/usr/bin/ruby
 require_relative('vehicle')
-
 class Bike < Vehicle
   attr_reader :dealer
 

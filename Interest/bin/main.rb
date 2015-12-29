@@ -1,4 +1,4 @@
-require '../lib/interest'
+require_relative '../lib/interest'
 puts 'I will be calculating both Simple and Compound Interest...'
 puts 'Try to input a valid value, I will reset any invalid value to 0.00'
 print 'Supply the principal:             '

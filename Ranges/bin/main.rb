@@ -1,5 +1,4 @@
-require '../lib/character_counter'
-_character_counter = CharacterCounter.new
+require_relative '../lib/string'
 print 'Enter the word to analyse:      '
-_user_input = gets.chomp
-puts _character_counter.count(_user_input)
+user_input = gets.chomp
+puts user_input.count_characters

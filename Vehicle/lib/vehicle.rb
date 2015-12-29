@@ -1,4 +1,3 @@
-#!/usr/bin/ruby
 class Vehicle
   attr_reader :name, :price
 

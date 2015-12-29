@@ -1,5 +1,4 @@
-#!/usr/bin/ruby
-require '../lib/customer'
+require_relative '../lib/customer'
 exit = false
 begin
   puts 'Welcome to your Personal Bank Inc.'
@@ -7,20 +6,20 @@ begin
   puts 'To exit the application press     q or Q'
   puts
   print 'Kindly tell me what you want to do:      '
-  _user_input = gets.chomp.to_s
+  user_input = gets.chomp.to_s
   puts
-  case _user_input
+  case user_input
     when 'q', 'Q'
       puts 'Thanks you, Seems you are done, I need to shutdown.'
       exit = true
     when '1'
       puts 'I\'ll be asking you a few questions to create your account'
       print 'Name:      '
-      _user_name = gets.chomp.to_s
+      user_name = gets.chomp.to_s
       puts
       puts 'I think i should do with your name alone (for now though)'
       puts
-      $customer = Customer.new(_user_name)
+      $customer = Customer.new(user_name)
       puts 'Account Created!'
       quit = false
       begin
@@ -32,21 +31,21 @@ begin
         quit = false
         puts
         print 'Kindly tell me what you want to do:      '
-        _user_input = gets.chomp.to_s
+        user_input = gets.chomp.to_s
         puts
-        case _user_input
+        case user_input
           when 'q', 'Q'
             puts 'Thanks you, Seems you are done, I need to attend to other customers.'
             puts
             quit = true
           when '1'
             print 'Supply the amount to deposit:     '
-            _amount_to_deposit = Float(gets)
-            puts $customer.deposit(_amount_to_deposit)
+            amount_to_deposit = Float(gets)
+            puts $customer.deposit(amount_to_deposit)
           when '2'
             print 'Supply the amount to withdraw:    '
-            _amount_to_withdraw = Float(gets)
-            puts $customer.withdraw(_amount_to_withdraw)
+            amount_to_withdraw = Float(gets)
+            puts $customer.withdraw(amount_to_withdraw)
           when '3'
             puts 'Your account details is as follows'
             puts "Name:             #{$customer.name}"
