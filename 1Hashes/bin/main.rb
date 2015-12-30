@@ -7,7 +7,7 @@ print 'Do you want me to ignore cases(yes|no)?     '
 user_cases = gets.chomp
 puts
 ignore_cases = user_cases.to_s == 'yes' ? true : false
-resultant = user_input.count_alphabet(ignore_cases)
+resultant    = user_input.count_alphabet(ignore_cases)
 resultant.each do |key, value|
   puts "#{key} appears  #{value} time(s)"
 end

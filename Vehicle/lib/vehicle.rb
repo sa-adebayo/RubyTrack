@@ -2,7 +2,7 @@ class Vehicle
   attr_reader :name, :price
 
   def initialize(name, price)
-    @name = name
+    @name  = name
     @price = price
   end
 

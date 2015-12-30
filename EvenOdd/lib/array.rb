@@ -1,9 +1,9 @@
 require_relative '../../Hash/lib/array'
 class Hash
   def sort_inject
-    sorted_hash = {even: [], odd: []}
+    sorted_hash = { even: [], odd: [] }
     self.inject(0) do
-        |map, (key, value)|
+    |map, (key, value)|
       if key % 2 == 0
         sorted_hash[:even] << value
       else

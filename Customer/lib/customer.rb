@@ -3,9 +3,9 @@ class Customer
   attr_reader :name, :balance, :account_number
 
   def initialize(name)
-    @name = name
+    @name           = name
     @account_number = $account_number = $account_number + 1
-    @balance = 1000
+    @balance        = 1000
   end
 
   def deposit(amount)

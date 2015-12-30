@@ -6,13 +6,13 @@ begin
   user_input = gets.chomp.to_s
   puts
   case user_input
-    when 'q', 'Q'
-      puts 'Thanks for using this palindrome application'
-      quit = true
-    when user_input.length < 3
-      puts 'You did not supply a valid word. I need a word that is more than two characters'
-    else
-      puts user_input.check_palindrome
+  when 'q', 'Q'
+    puts 'Thanks for using this palindrome application'
+    quit = true
+  when user_input.length < 1
+    puts 'You did not supply a valid word. I need a word that is more than two characters'
+  else
+    puts user_input.check_palindrome
   end
 end until quit
 puts

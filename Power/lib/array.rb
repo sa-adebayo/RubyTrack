@@ -4,6 +4,6 @@ class Array
     self.each do |a|
       array << (a ** power)
     end
-    print  array
+    print array
   end
 end
