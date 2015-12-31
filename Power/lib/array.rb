@@ -1,9 +1,5 @@
 class Array
   def power(power)
-    array = Array.new
-    self.each do |a|
-      array << (a ** power)
-    end
-    print array
+    print self.collect { |a| (a ** power) }
   end
 end
