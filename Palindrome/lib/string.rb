@@ -3,7 +3,7 @@ class String
   private :word, :reverse_word
 
   def check_palindrome
-    @word         = self.downcase.scan(/./)
+    @word         = downcase.scan(/./)
     @reverse_word = []
     word_array    = @word.dup
     (1..@word.length).each { | | @reverse_word << word_array.pop }
