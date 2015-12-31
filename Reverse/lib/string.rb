@@ -1,6 +1,6 @@
 class String
   def reverse_word
-    array_of_word = self.split(/[\W+&&[\s]]/)
+    array_of_word = split(/[\W+&&[\s]]/)
     result = []
     begin
       result << array_of_word.pop
@@ -9,7 +9,7 @@ class String
   end
 
   def reverse_word_inbuilt
-    array_of_word = self.split(/[\W+&&[\s]]/).reverse
+    array_of_word = split(/[\W+&&[\s]]/).reverse
     array_of_word.join(' ')
   end
 end

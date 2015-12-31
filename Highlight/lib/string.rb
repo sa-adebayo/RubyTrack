@@ -3,7 +3,7 @@ class String
     #count = self.scan(/#{word}/i).length
     #replaced_word = self.gsub(/#{word}/i, "(#{word})")
     count = 0
-    replaced_word = self.gsub(/#{word}/i) { |match|
+    replaced_word = gsub(/#{word}/i) { |match|
       count += 1
       '(' + match + ')'
     }

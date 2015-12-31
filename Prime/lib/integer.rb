@@ -1,7 +1,7 @@
 class Integer
   def prime_numbers(limit)
     prime_numbers = []
-    self.step(limit, 1) do |i|
+    step(limit, 1) do |i|
       if (i % 2 > 0) && (i > 1)
         valid = true
         prime_numbers.each do |e|
