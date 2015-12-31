@@ -9,7 +9,6 @@ class String
   end
 
   def reverse_word_inbuilt
-    array_of_word = split(/[\W+&&[\s]]/).reverse
-    array_of_word.join(' ')
+    split(/[\W+&&[\s]]/).reverse.join(' ')
   end
 end
