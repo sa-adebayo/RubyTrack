@@ -53,14 +53,12 @@ when 2
   case user_response
   when 1
     print 'New price:     '
-    new_price          = gets.chomp
-    new_bike.set_price = new_price
+    new_bike.set_price = gets.chomp
     puts 'You just updated the new Bike price, the Bike detail is as below:'
     puts "Name: #{new_bike.name} Price: #{new_bike.price} Dealer: #{new_bike.dealer}"
   when 2
     print 'New dealer:     '
-    new_price           = gets.chomp
-    new_bike.set_dealer = new_price
+    new_bike.set_dealer = gets.chomp
     puts 'You just updated the new Bike dealer, the Bike detail is as below:'
     puts "Name: #{new_bike.name} Price: #{new_bike.price} Dealer: #{new_bike.dealer}"
   else

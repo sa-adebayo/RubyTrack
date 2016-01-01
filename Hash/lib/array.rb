@@ -2,11 +2,8 @@ class Array
   def to_hash
     hash = Hash.new
     for i in self do
-      if hash.has_key?(i.to_s.length)
-        hash[i.to_s.length] << i
-      else
-        hash[i.to_s.length] = [i]
-      end
+      hash[i.to_s.length] ||= []
+      hash[i.to_s.length] << i
     end
     hash
   end
