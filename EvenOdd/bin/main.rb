@@ -1,4 +1,4 @@
-require_relative '../lib/array'
+require_relative '../lib/hash'
 puts 'Using Inject on Array'
 puts [10, 122, '3a', 3214, 75, 'sd', 7, 'lj34', 456, 'h', 'a', 215678].sort_hash_to_even_odd
 puts

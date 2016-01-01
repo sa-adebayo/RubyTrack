@@ -1,7 +1,7 @@
 class String
   def check_palindrome
-    word         = downcase.scan(/./)
-    reverse_word = reverse.downcase.scan(/./)
+    word         = downcase
+    reverse_word = reverse.downcase
     if word == reverse_word
       puts "Hurray! The word '#{self}' is really a palindrome"
     else

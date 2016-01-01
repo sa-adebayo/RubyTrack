@@ -3,10 +3,10 @@ class String
     #count = self.scan(/#{word}/i).length
     #replaced_word = self.gsub(/#{word}/i, "(#{word})")
     count = 0
-    replaced_word = gsub(/#{word}/i) { |match|
+    gsub!(/#{word}/i) do |match|
       count += 1
-      '(' + match + ')'
-    }
-    replaced_word + " Total Occurrence found: #{count}"
+      "(#{match})"
+    end
+    count
   end
 end

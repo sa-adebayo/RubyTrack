@@ -1,13 +1,10 @@
 class Vehicle
-  attr_reader :name, :price
+  attr_reader :name
+  attr_accessor :price
 
   def initialize(name, price)
     @name  = name
     @price = price
-  end
-
-  def set_price=(new_price)
-    @price = new_price
   end
 
   def details
