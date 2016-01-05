@@ -7,4 +7,4 @@ print 'Search term?       '
 search_term = gets.chomp
 puts
 occurrence = user_sentences.highlight_search(search_term)
-print user_sentences + " : Total Occurrence found: #{occurrence}"
+print "#{user_sentences} : Total Occurrence found: #{occurrence}"

@@ -1,7 +1,7 @@
 require_relative '../../Hash/lib/array'
 class Hash
   def sort_inject
-    sorted_hash = Hash.new{ |hash, key| hash[key] = [] }
+    sorted_hash = Hash.new { |hash, key| hash[key] = [] }
     inject(0) do
     |map, (key, value)|
       if Integer(key).even?

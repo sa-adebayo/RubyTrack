@@ -6,5 +6,5 @@ puts
 begin
   puts "The Factorial of #{user_input} is: #{user_input.calculate_factorial}"
 rescue Exception => e
-  puts 'An error occurred in the program, It seems messy but I just handled it.' + e.message
+  puts 'An error occurred in the program, It seems messy but I just handled it.  :  ' + e.message
 end

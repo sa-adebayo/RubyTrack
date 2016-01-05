@@ -4,8 +4,7 @@ begin
   first_name = gets.chomp
   print 'What is your last name:     '
   last_name = gets.chomp
-  name = Name.new(first_name, last_name)
-  name.validate
+  Name.new(first_name, last_name)
 rescue EmptyValueException => e
   puts 'Haaa! ' + e.reason
 rescue CaseException => c
