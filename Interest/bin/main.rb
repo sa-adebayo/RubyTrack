@@ -2,14 +2,13 @@ require_relative '../lib/interest'
 puts 'I will be calculating both Simple and Compound Interest...'
 puts 'Try to input a valid value, I will reset any invalid value to 0.00'
 print 'Supply the principal:             '
-principal = Float(gets.chomp) rescue 0.00
+principal = Float('%.2f' % gets.chomp) rescue 0.00
 print 'Supply the interest time:         '
 time = Float(gets.chomp) rescue 0.00
 puts
 bank = Interest.new do |bank|
   bank.principal = principal
   bank.time = time
-  bank.rate = 10
 end
 print "Simple interest is #{bank.simple_interest}, Compound interest is #{bank.compound_interest} and the Difference is #{bank.difference}"
 puts
@@ -27,7 +26,7 @@ begin
   case user_response.to_s.downcase
     when 'p'
       print 'What is the new Principal Value?       '
-      bank.principal = Float(gets.chomp) rescue 0.00
+      bank.principal = Float('%.2f' % gets.chomp) rescue 0.00
     when 'r'
       print 'What is the new Interest Rate Value?   '
       bank.rate = Float(gets.chomp) rescue 0.00
