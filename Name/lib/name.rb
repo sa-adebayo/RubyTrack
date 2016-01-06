@@ -18,8 +18,6 @@ class Name
       raise EmptyValueException, 'You did not supplied a last name! Do you think I am dumb?'
     elsif first_name[0].match(/[[:lower:]]/)
       raise CaseException, 'First name did not start with a Capital letter.'
-    else
-      true
     end
   end
 end

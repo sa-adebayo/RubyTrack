@@ -2,9 +2,9 @@
 class Interest
   attr_reader :principal, :rate, :time, :compound_interest, :simple_interest, :difference
   #default values passed if we do not give argument, if we give argument then that will be valid
-  def initialize(principal = 1000.00, time = 1.0, &block)
+  def initialize(principal = 1000.00, time = 1.0)
     if block_given?
-      block.yield self
+      yield self
     else
       @principal = principal
       @time = time
