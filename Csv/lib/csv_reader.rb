@@ -1,7 +1,7 @@
 require 'csv'
 require_relative 'employee'
 class CsvReader
-  def CsvReader.read(file)
+  def self.read(file)
     line_count = 0
     employee = []
     puts '..... I am reading the file here .......'
@@ -9,7 +9,12 @@ class CsvReader
       employee[line_count] = Employee.new(employee_information[0], employee_information[1], employee_information[2])
       line_count += 1
     end
+    employee_sorted = sort(employee)
+    write(employee_sorted)
+  end
 
+  private
+  def self.sort(employee)
     puts '..... Sorting employee in the csv files ......'
     employee.sort!{|a, b| a.designation <=> b.designation }
     employee_sorted = {}
@@ -20,6 +25,10 @@ class CsvReader
         employee_sorted[e.designation] = [e]
       end
     end
+    employee_sorted
+  end
+
+  def self.write(employee_sorted)
     puts '....... started writing into file ........'
     File.open('sorted_employee', 'w') do |file_writer|
       employee_sorted.each do |key, grouped_employee|
