@@ -3,9 +3,10 @@ class Customer
   @@account_number = 0
 
   def initialize(name)
-    @name           = name
-    @account_number = @@account_number = @@account_number + 1
-    @balance        = 1000
+    @name            = name
+    @@account_number += 1
+    @account_number  = @@account_number
+    @balance         = 1000
   end
 
   def deposit(amount)

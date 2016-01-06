@@ -19,7 +19,7 @@ begin
     puts
     puts 'I think i should do with your name alone (for now though)'
     puts
-    $customer = Customer.new(user_name)
+    customer = Customer.new(user_name)
     puts 'Account Created!'
     quit = false
     begin
@@ -41,16 +41,16 @@ begin
       when '1'
         print 'Supply the amount to deposit:     '
         amount_to_deposit = Float(gets)
-        puts $customer.deposit(amount_to_deposit)
+        puts customer.deposit(amount_to_deposit)
       when '2'
         print 'Supply the amount to withdraw:    '
         amount_to_withdraw = Float(gets)
-        puts $customer.withdraw(amount_to_withdraw)
+        puts customer.withdraw(amount_to_withdraw)
       when '3'
         puts 'Your account details is as follows'
-        puts "Name:             #{$customer.name}"
-        puts "Account Number:   #{$customer.account_number}"
-        puts "Account Balance:  #{$customer.balance}"
+        puts "Name:             #{customer.name}"
+        puts "Account Number:   #{customer.account_number}"
+        puts "Account Balance:  #{customer.balance}"
         puts
       else
         puts 'You did not supply a valid code'
