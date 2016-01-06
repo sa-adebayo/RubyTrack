@@ -4,7 +4,7 @@ class String
     upper_alphabets_range = 'A'..'Z'
     lower_alphabets_range = 'a'..'z'
     digits_range = '0'..'9'
-    self.each_char do |char|
+    each_char do |char|
       case char
       when upper_alphabets_range
         character_count[:uppercase] += 1
