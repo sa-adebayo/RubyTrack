@@ -15,13 +15,9 @@ class CsvReader
   def self.sort(employee)
     puts '..... Sorting employee in the csv files ......'
     employee.sort!{|a, b| a.designation <=> b.designation }
-    employee_sorted = {}
+    employee_sorted = Hash.new { |hash, key| hash[key] = [] }
     employee.each do |e|
-      if employee_sorted.has_key?(e.designation)
         employee_sorted[e.designation] << e
-      else
-        employee_sorted[e.designation] = [e]
-      end
     end
     employee_sorted
   end
