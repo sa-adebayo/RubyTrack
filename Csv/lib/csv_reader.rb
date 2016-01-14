@@ -2,18 +2,16 @@ require 'csv'
 require_relative 'employee'
 class CsvReader
   def self.read(file)
-    line_count = 0
     employee = []
     puts '..... I am reading the file here .......'
-    CSV.foreach(file) do |employee_information|
-      employee[line_count] = Employee.new(employee_information[0], employee_information[1], employee_information[2])
-      line_count += 1
+    file = CSV.read(file, headers: true)
+    file.each do |employee_information|
+      employee << Employee.new(employee_information[0], employee_information[1], employee_information[2])
     end
     employee_sorted = sort(employee)
     write(employee_sorted)
   end
 
-  private
   def self.sort(employee)
     puts '..... Sorting employee in the csv files ......'
     employee.sort!{|a, b| a.designation <=> b.designation }
@@ -32,11 +30,13 @@ class CsvReader
     puts '....... started writing into file ........'
     File.open('sorted_employee', 'w') do |file_writer|
       employee_sorted.each do |key, grouped_employee|
-        file_writer.print grouped_employee.length > 1 ? "#{key}s \n" : "#{key} \n"
+        file_writer.puts grouped_employee.length > 1 ? "#{key}s " : "#{key} "
         grouped_employee.each do |each_employee|
-          file_writer.print each_employee.write + "\n"
+          file_writer.puts each_employee.write
         end
       end
     end
   end
+
+  private_class_method :sort, :write
 end
